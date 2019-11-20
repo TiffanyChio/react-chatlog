@@ -10,7 +10,7 @@ const ChatLog = (props) => {
   });
 
   return(
-    <article>{messageArr}</article>
+    <article className="chat-log">{messageArr}</article>
   );
 };
 
