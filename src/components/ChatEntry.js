@@ -4,10 +4,12 @@ import Timestamp from './Timestamp';
 
 const ChatEntry = (props) => {
   return(
-    <section>
-      <p>{props.message.sender}</p>
-      <p>{props.message.body}</p>
-      <p><Timestamp time={props.message.timeStamp} /></p>
+    <section className="chat-entry local">
+      <p className="entry-name">{props.message.sender}</p>
+      <div className="entry-bubble">
+        <p>{props.message.body}</p>
+        <p className="entry-time"><Timestamp time={props.message.timeStamp} /></p>
+      </div>
     </section>
   );
 };
