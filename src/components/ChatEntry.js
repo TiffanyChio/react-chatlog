@@ -4,11 +4,11 @@ import Timestamp from './Timestamp';
 
 const ChatEntry = (props) => {
   return(
-    <section className="chat-entry local">
-      <p className="entry-name">{props.message.sender}</p>
+    <section className={ props.message.sender === 'Vladimir' ? 'chat-entry local' : 'chat-entry remote' }>
+      <p className="entry-name">{ props.message.sender }</p>
       <div className="entry-bubble">
-        <p>{props.message.body}</p>
-        <p className="entry-time"><Timestamp time={props.message.timeStamp} /></p>
+        <p>{ props.message.body }</p>
+        <p className="entry-time"><Timestamp time={ props.message.timeStamp } /></p>
       </div>
     </section>
   );

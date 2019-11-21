@@ -16,19 +16,19 @@ const App = () => {
 
   for (let i=1; i < uniqueParticipants.length; i+=1) {
     if (i === uniqueParticipants.length - 1) {
-      nameStr += ` and ${uniqueParticipants[i]}`;
+      nameStr += ` and ${ uniqueParticipants[i] }`;
     } else {
-      nameStr += `, ${uniqueParticipants[i]}`;
+      nameStr += `, ${ uniqueParticipants[i] }`;
     }
   }
 
   return (
     <div id="App">
       <header>
-        <h1>Chat between {nameStr}</h1>
+        <h1>Chat between { nameStr }</h1>
       </header>
       <main>
-        <ChatLog messages={chatMessages} />
+        <ChatLog messages={ chatMessages } />
       </main>
     </div>
   );
